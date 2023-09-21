@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Peer Pulse</title>
+</head>
+
+<body class="vh-100 overflow hidden">
+  <!-- navbar(Importing from Header.ejs) -->
+  <%- include("partials/Header") %>
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary background img-fluid">
+    <div class="col-6 p-lg-5 pg- mx-auto my-5">
+      <h1 class="display-2 fw-bold text-dark">
+        Creating Connections, One Pulse at a Time.
+      </h1>
+      <h5 class="fw-normal text-muted mb-3">
+        Discover, Connect, Thrive.
+      </h5>
+
+      <!-- Button -->
+      <a class="playstore-button" href="/">
+        <img class="mx-1 my-2" src="/images/google.png" alt="">
+        <img class="mx-1 my-3" src="/images/Apple.png" alt="">
+      </a>
+
+      <div class="d-flex gap-3 justify-content-center lead fw-normal"></div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+  <section id="testimoial" class="testimonial-wrapper wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center mb-4">
+          <h3 class="text-black">More than messaging</h3>
+          <p class="text-black">
+            With a variety of calling and messaging features, you have endless
+            options when it comes to expressing yourself.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-sm-3 pt-sm-0 pt-4">
+          <img src="/images/Videocall-1.gif" class="img-fluid" alt="" />
+          <h3 class="pt-4 mb-0 fw-bold">Group chats &amp; calls</h3>
+          <p>
+            Like and reply to messages in group chats or start a group video
+            or voice call instantly
+          </p>
+        </div>
+
+        <div class="col-sm-3 pt-sm-0 pt-4">
+          <img src="/images/Group_chat_258_236.gif" class="img-fluid" alt="" />
+          <h3 class="pt-4 mb-0 fw-bold">Group chats &amp; calls</h3>
+          <p>
+            Like and reply to messages in group chats or start a group video
+            or voice call instantly
+          </p>
+        </div>
+
+        <div class="col-sm-3 pt-sm-0 pt-4">
+          <img src="/images/Legcat.1517733927.gif" class="img-fluid" alt="" />
+          <h3 class="pt-4 mb-0 fw-bold">Stickers &amp; GIFs</h3>
+          <p>
+            Endless stickers and GIFs for every possible expression. Not
+            enough? Create your own
+          </p>
+        </div>
+
+        <div class="col-sm-3 pt-sm-0 pt-4">
+          <img src="/images/multi.gif" class="img-fluid" alt="" />
+          <h3 class="pt-4 mb-0 fw-bold">On mobile &amp; desktop</h3>
+          <p>
+            Chats are 100% synced between devices, including 1-tap transfer of
+            calls
+          </p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg">
+        More Features
+      </button>
+    </div>
+  </section>
+  <div class="container marketing">
+    <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h1 class="featurette-heading fw-normal lh-1">
+          <span class="text-body-secondary">The New Social</span>
+        </h1>
+        <p class="lead">
+          Communities on Viber bring people together — Take part in a
+          conversation on any topic you’re passionate about.
+        </p>
+        <button type="button" class="btn btn-outline-primary btn-lg">
+          More About Communities
+        </button>
+      </div>
+      <div class="col-md-5">
+        <img src="/images/vo-new.png" alt="" class="img-fluid" />
+      </div>
+    </div>
+
+    <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h1 class="featurette-heading fw-normal lh-1">
+          <span class="text-body-secondary">Always secure Secure</span>
+        </h1>
+        <p class="lead">
+          Our mission is to protect your privacy so that you never have to
+          think twice about what you can or can't share when you're using
+          Viber.
+        </p>
+        <button type="button" class="btn btn-outline-primary btn-lg">
+          More About Security
+        </button>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="/images/Security_white_1X.png " alt="" class="img-fluid" />
+      </div>
+    </div>
+
+    <hr class="featurette-divider" />
+  </div>
+
+  <!-- Footer Section -->
+  <%- include("partials/Footer") %>
+
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>

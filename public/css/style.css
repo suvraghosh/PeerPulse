@@ -1,0 +1,31 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+.logo {
+    width: 140px;
+    height: 35px;
+}
+.sign-up-btn{
+    color: #fff;
+    background-color: #5a80cb;
+}
+.playstore-button img{
+    width: 200px;
+    height: 52px;
+}
+a{
+    text-decoration: none;
+}
+@media(max-width: 991px) {
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.background {
+    background-image: url(/images/social-bg.gif);
+    height: 39rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}

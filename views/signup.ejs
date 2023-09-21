@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+
+  <body>
+    <!-- Signing Up Section -->
+    <div class="left-items">
+      <h1>Train your mind for a healthier, happier life .</h1>
+      <i class="fa fa-check-square"><span>Learn the basics for free</span></i>
+      <i class="fa fa-check-square"><span>Backed by science</span></i>
+      <i class="fa fa-check-square"><span>Anytime, anywhere</span></i>
+    </div>
+    <div id="signup-bar">
+      <form action="/" method="post"></form>
+      <h2>Sign up</h2>
+      <p class="logIn">Already have an account? <a href="/login">log in</a></p>
+
+      <!-- Signing Up for new user -->
+      <form action="/register" method="post" class="signup-form">
+        <input type="text" name="firstName" placeholder="First Name" required />
+        <input type="text" name="lastName" placeholder="Last Name" required />
+        <input
+          type="text"
+          name="username"
+          placeholder="Email Address"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="Password"
+          placeholder="Enter Password (8+ Characters)"
+          required
+        />
+        <p class="privacy">
+          By continuing you agree to headspace's
+          <a href="">Terms & conditions</a> and <a href="">privacy policy</a>
+        </p>
+        <button type="submit" class="btn">Sign up</button>
+      </form>
+
+      <span class="text">or</span>
+      <button type="button" class="btn btn-google">
+        <img
+          width="20"
+          height="20"
+          src="https://img.icons8.com/color/48/google-logo.png"
+          alt="google-logo"
+        />
+        Continue with Google
+      </button>
+      <button type="button" class="btn btn-fb">
+        <img
+          width="25"
+          height="25"
+          src="https://img.icons8.com/fluency/48/facebook.png"
+          alt="facebook"
+        />
+        Continue with Facebook
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communities</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/communities.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <%- include("partials/Header") %>
+
+    <!-- Communities Section -->
+    <section id="communities" class="py-5 mb-0 my-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Explore Communities</h2>
+          <p>
+            Join communities that interest you and connect with like-minded
+            individuals.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="community-card">
+              <img
+                src="https://beyondexclamation.com/wp-content/uploads/2020/03/Using-social-media-communities.jpg"
+                alt="Community 1"
+              />
+              <h3>Technology Enthusiasts</h3>
+              <p>
+                Join discussions about the latest tech trends and innovations.
+              </p>
+              <a href="#" class="btn btn-primary">Join Community</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="community-card">
+              <img
+                src="https://brooksresources.com/wp-content/uploads/Building-community-sharing-food.jpg"
+                alt="Community 2"
+              />
+              <h3>Food Lovers</h3>
+              <p>
+                Share your favorite recipes and discover new culinary delights.
+              </p>
+              <a href="#" class="btn btn-primary">Join Community</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="community-card">
+              <img
+                src="https://www.traveldailymedia.com/assets/2020/03/shutterstock_729336025.jpg"
+                alt="Community 3"
+              />
+              <h3>Travel Explorers</h3>
+              <p>Plan your next adventure and share travel experiences.</p>
+              <a href="#" class="btn btn-primary">Join Community</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <%- include("partials/Footer") %>
+
+    <!-- Bootstrap Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

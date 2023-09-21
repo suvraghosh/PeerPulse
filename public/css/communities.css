@@ -1,0 +1,27 @@
+#communities{
+  font-family: 'Poppins', sans-serif;
+}
+#communities .community-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #communities .community-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #communities .community-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  #communities .community-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  

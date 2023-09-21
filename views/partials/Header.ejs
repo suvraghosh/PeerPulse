@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Navbar</title>
+</head>
+
+<!-- Navbar -->
+<body class="vh-100 overflow hidden">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand fs-4" href="/">
+        <img src="/images/PeerPulse-logo.png" alt="" height="40" width="43"/>
+        <img src="/images/PeerPulse_img.png" alt="" class="logo" />
+      </a>
+      <!-- Toggle-Button -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- SideBar -->
+      <div class="sidebar offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- sidebar-header -->
+        <div class="offcanvas-header text-white border-bottom">
+          <a class="offcanvas-title" id="offcanvasNavbarLabel" href="/">
+            <img src="/images/PeerPulse_img.png" alt="" class="logo" />
+          </a>
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <!-- SideBar-Body -->
+        <div class="offcanvas-body navbar-items">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="/">Download</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="/features">Features</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="/communities">Communities</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/security">Security</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+          </ul>
+          <!-- log-in or Sign up page -->
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <a href="/login" class="text-black">Login</a>
+            <a href="/signup" class="text-decoration-none px-3 py-1 rounded-4 sign-up-btn">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
