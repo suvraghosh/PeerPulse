@@ -24,7 +24,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/socialmediaDB");
+mongoose.connect("mongodb+srv://admin-suvra:J0IyKCt6PaTaJcVg@cluster0.98ifzzn.mongodb.net/socialmediaDB");
 
 const socialmediaSchema = new mongoose.Schema({
     email: String,
