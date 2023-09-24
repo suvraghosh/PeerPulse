@@ -104,8 +104,7 @@
     background-color: #16528C;
   }
   .btn:hover{
-    opacity: 0.9;
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
   .btn img{
     margin-right: 8px;
@@ -135,10 +134,10 @@
   @media (max-width:480px) {
     #signup-bar{
       height: 440px;
-      width: 240px;
+      width: 330px;
     }
     .logIn {
-      font-size: 10px;
+      font-size: 13px;
     }
     input {
       height: 33px;
@@ -148,10 +147,10 @@
     }
     .privacy {
       margin: 5px 0;
-      font-size: 10px;
+      font-size: 12px;
     }
     .text{
-      font-size: 10px;
+      font-size: 14px;
     }
     .btn{
       font-size: 10px;

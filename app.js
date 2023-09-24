@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
@@ -17,14 +18,14 @@ app.set("view engine", "ejs");
 
 // Setting up sessions
 app.use(session({
-    secret: "This is the secret",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-suvra:J0IyKCt6PaTaJcVg@cluster0.98ifzzn.mongodb.net/socialmediaDB");
+mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
 
 const socialmediaSchema = new mongoose.Schema({
     email: String,
