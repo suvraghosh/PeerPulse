@@ -12,6 +12,9 @@ header .nav-icons{
   position: relative;
   right: 36px;
 }
+h5{
+  color: #6499E9;
+}
 /* Form */
 .form button {
   border: none;
@@ -109,6 +112,30 @@ input:not(:placeholder-shown) ~ .reset {
 .avatar-img {
   width: 50px;
   height: 45px;
+}
+.add-friend{
+  color: #1E90FF;
+}
+.blog-text{
+  color: #74a4f2;
+}
+.feed-post li svg{
+  color: #1d9bf0;
+}
+.feed-post a{
+  color: #a8c4d9;
+}
+.feed-post a:hover{
+  color: #50b3ff;
+}
+.feed-post button{
+  background-color: #1d9bf0;
+}
+.left-nav span{
+  color: #a8c4d9;
+}
+.feed-nav-links a{
+  color: #279EFF;
 }
 #news-feed {
   background-color: #0f0f10;
