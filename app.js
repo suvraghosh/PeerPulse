@@ -89,23 +89,21 @@ app.post('/register', (req, res) => {
 })
 
 // Login the existing user
-app.post('/login', (req, res) => {
-    const user = new User({
-        username: req.body.username,
-        password: req.body.password
-    });
-    req.login(user, (err) => {
-        if (err) {
-            console.log(err);
-            res.redirect("/login");
-        } else {
-            passport.authenticate("local")(req, res, function () {
-                res.redirect("/feed");
-                isAuthenticate = true;
-            })
-        }
-    })
-})
+app.post('/login', (req, res, next) => {
+    passport.authenticate('local', (err, user, info) => {
+        // Authentication succeeded
+        req.login(user, (err) => {
+            if (!user) {
+                return res.render("login", { errorMessage: "Invalid username or password" }); // Log the error for debugging
+            }else{
+                passport.authenticate("local")(req, res, function () {
+                    res.redirect("/feed");
+                    isAuthenticate = true;
+                })
+            }
+        });
+    })(req, res, next);
+});
 
 
 app.listen(port,()=>{
@@ -117,7 +115,7 @@ app.listen(port,()=>{
 var posts = [
     {
         id: 1,
-        "profilePic": "https://pbs.twimg.com/profile_images/1685344710498656256/PYCqwObJ_400x400.jpg",
+        "profilePic": "https://pbs.twimg.com/profile_images/1718197561713131520/HQFznAK2_400x400.jpg",
         "name": "Suvra Ghosh",
         "description": "You 'might' not succeed at first..But you eventually will if you keep trying!",
         "postImage": "https://pbs.twimg.com/media/F3u8vrsbkAAqf91?format=jpg&name=medium"
@@ -131,42 +129,42 @@ var posts = [
     },
     {
         id: 3,
-        "profilePic": "https://media.licdn.com/dms/image/C4D03AQGGB6CT6NqFzQ/profile-displayphoto-shrink_100_100/0/1618725077549?e=1700697600&v=beta&t=bVWRZez7P_jwVuEoWBH4NN5UOk-LyWoHlLwGtGENORI",
-        "name": "Sandeep Jain",
-        "description": "Coding all day, every day! 💻",
-        "postImage": "https://media.licdn.com/dms/image/D4D22AQElnD-BP-9iZQ/feedshare-shrink_800/0/1694281407635?e=1698278400&v=beta&t=zIeiY4ByGhVDuVYLnR4rYnMYIP3GY-ciUGvNy-sB5-0"
+        "profilePic": "https://pbs.twimg.com/profile_images/1651292382804185089/GNI3ZRtK_400x400.jpg",
+        "name": "Saurabh Kumar",
+        "description": "Productive evening (Work from park)💻",
+        "postImage": "https://pbs.twimg.com/media/F97Fb8fbgAAVXUi?format=jpg&name=medium"
     },
     {
         id: 4,
-        "profilePic": "https://media.licdn.com/dms/image/C4D03AQEdzwKv80hEnA/profile-displayphoto-shrink_100_100/0/1516590596897?e=1700697600&v=beta&t=mj3Vg4GxVL87fdty6tNCjvJo0lu1YAiz7WgkJZrgwxA",
-        "name": "Daniel Abrahams",
-        "description": "Just start.",
-        "postImage": "https://media.licdn.com/dms/image/D5622AQHD4dI5h6u-FA/feedshare-shrink_800/0/1691365111893?e=1698278400&v=beta&t=nFJ_kU6Ac_zxxvUR53oaxCvt7x8TJgs0dYYHHi687aY"
+        "profilePic": "https://pbs.twimg.com/profile_images/837204721723068417/retChlXc_400x400.jpg",
+        "name": "The Engineer Bro",
+        "description": "Crazy!!☠️",
+        "postImage": "https://pbs.twimg.com/media/F97vHvfa8AA1HjJ?format=jpg&name=small"
     },
     {
         id: 5,
         "profilePic": "https://media.licdn.com/dms/image/D4D0BAQFThEvZuev8jA/company-logo_100_100/0/1693993872406/codingninjas_logo?e=1703116800&v=beta&t=THzd_aLIFi1Tu2utg4LYDDEyCaAAnzdABM5dkZBbaC4",
         "name": "Coding Ninjas",
-        "description": "Comments always lie. Write the biggest lie in the comments👇🥲",
-        "postImage": "https://media.licdn.com/dms/image/D4D22AQGGz07osYY22w/feedshare-shrink_800/0/1692967955224?e=1698278400&v=beta&t=_JuszH6C7UsYMGowZEbF6w7U2o7oRFaOmdtpCL0EZ14"
+        "description": "Privacy is power.",
+        "postImage": "https://pbs.twimg.com/media/F97qVUVa4AAO47B?format=jpg&name=900x900"
     },
     {
         id: 6,
         "profilePic": "https://media.licdn.com/dms/image/C4D03AQGGB6CT6NqFzQ/profile-displayphoto-shrink_100_100/0/1618725077549?e=1700697600&v=beta&t=bVWRZez7P_jwVuEoWBH4NN5UOk-LyWoHlLwGtGENORI",
         "name": "Sandeep Jain",
-        "description": "History made anew as #Chandrayaan3 lands on the lunar soil, marking a monumental leap for our nation's space prowess! It fills us with immense pride to stand as the pioneering nation that has successfully touched down on the south pole of the moon.Proud to witness this extraordinary achievement that propels us even closer to the stars. #IndiaInSpace #ChandrayaanLanding 🇮🇳",
-        "postImage": "https://media.licdn.com/dms/image/D4D22AQF6rhE0kM_Tdg/feedshare-shrink_2048_1536/0/1692795151743?e=1698278400&v=beta&t=GakI7tr3mBuKDAjBujBTYrgoxF8pxJWBWiVHLNOAofk"
+        "description": "Taking meetings in your backyard >",
+        "postImage": "https://pbs.twimg.com/media/F93-8nYXQAAsgPL?format=jpg&name=small"
     },
     {
         id: 7,
         "profilePic": "https://media.licdn.com/dms/image/D5603AQE_kj8WigWDqg/profile-displayphoto-shrink_100_100/0/1688744624208?e=1700697600&v=beta&t=sgYHeKydKO9Sj1gLd7Gx_JOrljIRx5ErCU5geNIBrAo",
         "name": "Suvra Ghosh",
-        "description": "As an entrepreneur you have to feel like you can jump out of an aeroplane because you're confident that you'll catch a bird flying by.It's an act of stupidity, and most entrepreneurs go splat because the bird doesn’t come by, but a few times it does. - Reed Hastings",
-        "postImage": "https://media.licdn.com/dms/image/D4D22AQHacFeMIT9hjA/feedshare-shrink_800/0/1690513509382?e=1698278400&v=beta&t=w_j6RK459YFq1BLpksXP_jjlGBuObZ2uZJw5om5KWEE"
+        "description": "Fresh outta college ready to take on the world...",
+        "postImage": "https://pbs.twimg.com/media/F92TAmsWEAAh4f0?format=jpg&name=small"
     },
     {
         id: 8,
-        "profilePic": "https://pbs.twimg.com/profile_images/1672620718239141889/XTOsUdwx_400x400.jpg",
+        "profilePic": "https://pbs.twimg.com/profile_images/1633141863006838784/J4Zmxrmr_400x400.jpg",
         "name": "izzy",
         "description": "toxic chatgpt is the best coding partner i can have",
         "postImage": "https://pbs.twimg.com/media/F6XfaHyboAAjV0S?format=webp&name=small"
@@ -175,8 +173,8 @@ var posts = [
         id: 9,
         "profilePic": "https://media.licdn.com/dms/image/C4D0BAQHa212XwpTpRw/company-logo_100_100/0/1660626687953/geeksforgeeks_logo?e=1703116800&v=beta&t=nvdAQIwziNlAQT2K0nhe7B3-2WyHBCJz-rNfi3tjR4w",
         "name": "GeeksforGeeks",
-        "description": "Purr-sonal attack 🥲",
-        "postImage": "https://media.licdn.com/dms/image/D4D22AQE5WgUkLVmm1g/feedshare-shrink_800/0/1690367409643?e=1698278400&v=beta&t=SYanykhTwhDNjCllAeLBDpjUDktAuAynj296W54OS2E"
+        "description": "The last option is the best",
+        "postImage": "https://pbs.twimg.com/media/F9wNXAiXAAA4ptu?format=jpg&name=medium"
     },
     {
         id: 11,
@@ -224,8 +222,8 @@ var posts = [
         id: 17,
         "profilePic": "https://media.licdn.com/dms/image/D5603AQF4voR_1_BQZg/profile-displayphoto-shrink_100_100/0/1687295026446?e=1700697600&v=beta&t=xAHyIPjzg6KvkYX-bgFG6_yATiMpWi8qVCoUI1I4ft8",
         "name": "Nikita Gupta",
-        "description": 'Do you agree?👇',
-        "postImage": "https://media.licdn.com/dms/image/D5622AQGDIMSptZg7Pw/feedshare-shrink_800/0/1695196300064?e=1698278400&v=beta&t=wdUXhNT4Le1Ex21uyNOaXuvnCiK-3crcZ3vG4sNRzw8"
+        "description": 'Started learning Kubernetes',
+        "postImage": "https://pbs.twimg.com/media/F95aPwkXUAAOvqE?format=jpg&name=small"
     },
     {
         id: 18,
@@ -259,8 +257,8 @@ var posts = [
         id: 22,
         "profilePic": "https://pbs.twimg.com/profile_images/1633141863006838784/J4Zmxrmr_400x400.jpg",
         "name": "Programmer Memes",
-        "description": 'CSS is the worst programming language',
-        "postImage": "https://pbs.twimg.com/media/F5963A4XsAA2udn?format=jpg&name=small"
+        "description": '#Python Pop Quiz 🐍❓',
+        "postImage": "https://twitter.com/driscollis/status/1719701486735958066/photo/1"
     },
     {
         id: 23,
@@ -336,18 +334,11 @@ var posts = [
         id: 33,
         "profilePic": "https://media.licdn.com/dms/image/C4D0BAQHa212XwpTpRw/company-logo_100_100/0/1660626687953/geeksforgeeks_logo?e=1703116800&v=beta&t=nvdAQIwziNlAQT2K0nhe7B3-2WyHBCJz-rNfi3tjR4w",
         "name": "GeeksforGeeks",
-        "description": 'Good morning friends 👍',
-        "postImage": "https://media.licdn.com/dms/image/D4D22AQHHRTFQXsDhsg/feedshare-shrink_800/0/1695187911114?e=1698278400&v=beta&t=c1VEyq7Il-tZ0Tf1LQsOw4Euu6ZUJvEzMr8O4noQ168"
+        "description": 'junior programmers vs senior programmers',
+        "postImage": "https://pbs.twimg.com/media/F92yR0hW4AAn9BU?format=png&name=small"
     },
     {
         id: 34,
-        "profilePic": "https://media.licdn.com/dms/image/D5603AQH-smSCvkH2Dg/profile-displayphoto-shrink_100_100/0/1694944220075?e=1700697600&v=beta&t=4FCdFSDDtPHODgvPNuE6bhlP8jzMGn2X_LWqGC-8zdU",
-        "name": "Bhaskar Nandy",
-        "description": "Bhaiya abhi Development kare ya DSA kare or DEV & DSA dono parallelly kaise manage kare.. This is a common question that I In the era of software engineering, development covers a massive area where combination of your problem solving skill and development skill will make you a better engineer (I know there are so many ways to become a better engineer but it's one of them).So assuming you're making a social media app which has an infinite scrolling system.. Over here using a doubly linked list will make it infinitely scrollable in both directions (node->left or node->right).. And to update the newsfeed you just have to add a new node.. So simple huhh!!Yea DSA/CP will improve your problem solving skill where development is the implementation of your problem solving skill..A good problem solving skill will help you to think about the different approaches that can be implemented to build something so that software becomes more optimised..And to manage all these things you just have to make a schedule and have to follow it.. Maybe you might miss a friends party or night outing but after reaching a point of life you won't be disappointed..(Don't make excuses like cllg me 75% attendance lagwane h toh time nhi milrha.. Jisko karna h wo kar lega theek 🤘)",
-        "postImage": "https://media.licdn.com/dms/image/D5622AQHNIOnPnBz_wA/feedshare-shrink_800/0/1694288346132?e=1698278400&v=beta&t=t7_O90MuYchenHrLx6EcC8f90MuZsrAxXZ4rsK7gDMM"
-    },
-    {
-        id: 35,
         "profilePic": "https://pbs.twimg.com/profile_images/1633141863006838784/J4Zmxrmr_400x400.jpg",
         "name": "Programmer Memes",
         "description": '100% true when it comes to developers',
