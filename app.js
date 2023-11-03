@@ -59,6 +59,14 @@ app.get('/feed', (req, res) => {
     }
 });
 
+app.get('/feed/chat', (req, res) => {
+    if (isAuthenticate === true) {
+        res.render('chat');
+    } else {
+        res.redirect("/login");
+    }
+});
+
 app.get('/blog', (req, res) => {
     res.render("blog")
 })
@@ -236,8 +244,8 @@ var posts = [
         id: 19,
         "profilePic": "https://media.licdn.com/dms/image/C4E0BAQFfKJaDYAqbkg/company-logo_100_100/0/1644469905471?e=1703116800&v=beta&t=r5bNrrxAuB4BuxXmSKJOlvtdhUuxK8w_9g_MbC-dJ24",
         "name": "Scalar",
-        "description": 'We dare you to tag that guy 🔫',
-        "postImage": "https://media.licdn.com/dms/image/D5622AQFctbXQl7n4SA/feedshare-shrink_800/0/1695153857691?e=1698278400&v=beta&t=FdoC2c-R_8V8MNtS1gaoIqg9oeLDTIKlfblo3rqFKsI"
+        "description": 'How to organize your React project like a pro',
+        "postImage": "https://pbs.twimg.com/media/F8sjOpBbUAAcbeO?format=jpg&name=small"
     },
     {
         id: 20,
@@ -257,8 +265,8 @@ var posts = [
         id: 22,
         "profilePic": "https://pbs.twimg.com/profile_images/1633141863006838784/J4Zmxrmr_400x400.jpg",
         "name": "Programmer Memes",
-        "description": '#Python Pop Quiz 🐍❓',
-        "postImage": "https://twitter.com/driscollis/status/1719701486735958066/photo/1"
+        "description": '💥 💥 💥 💥',
+        "postImage": "https://media.licdn.com/dms/image/D4D22AQHxhz3ebtAxjQ/feedshare-shrink_800/0/1699007561813?e=1701907200&v=beta&t=b9zHoYbWDwk1uV69i8tr5dGr1z_KydsoMv30vY86cjk"
     },
     {
         id: 23,

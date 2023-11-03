@@ -102,6 +102,148 @@ input:not(:placeholder-shown) ~ .reset {
   cursor: pointer;
   color: rgb(26, 164, 255);
 }
+/* chat button */
+.chat-button {
+  border: none;
+  background: #056bfae0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.chat-button:hover {
+  background: #056DFA;
+}
+.chat-button .lable {
+  font-size: 15px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+.chat-button .lable:hover {
+  color: #fff;
+}
+.chat-button:hover {
+  background: linear-gradient(to left, #0E40A5, #0E40A5);
+}
+.chat-button:hover .svg-icon {
+  animation: msg 2s linear infinite;
+}
+
+@keyframes msg {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  15% {
+    transform: translateX(1px);
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+
+  45% {
+    transform: translateY(1px);
+  }
+
+  60% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: translateX(-px);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+/* Notification Button */
+.notification-button {
+  background-color: rgb(66, 66, 66);
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+.bell {
+  width: 14px;
+}
+
+.bell path {
+  fill: rgb(0, 206, 62);
+}
+.notification-button:hover {
+  background-color: rgb(77, 77, 77);
+}
+.notification-button:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+.notification-bar {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  background: #465;
+  border: 1px solid #455;
+  justify-content: center;
+  border-radius: 5px;
+  position: fixed;
+  top: 68px;
+  left: 71%;
+  display: none;
+}
+.value {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  display: flex;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+  cursor: pointer;
+  text-align: left;
+}
+.value:hover{
+  background: rgba(0, 0, 0, 0.25);
+}
+.notification-button:hover .bell {
+  animation: bellRing 0.9s both;
+}
+
+/* bell ringing animation keyframes*/
+@keyframes bellRing {
+  0%,
+  100% {
+    transform-origin: top;
+  }
+
+  15% {
+    transform: rotateZ(10deg);
+  }
+
+  30% {
+    transform: rotateZ(-10deg);
+  }
+
+  45% {
+    transform: rotateZ(5deg);
+  }
+
+  60% {
+    transform: rotateZ(-5deg);
+  }
+
+  75% {
+    transform: rotateZ(2deg);
+  }
+}
+/* Profile Section */
 .profile-pic {
   margin-left: 10px;
 }
