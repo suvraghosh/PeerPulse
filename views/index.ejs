@@ -19,9 +19,8 @@
 
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary background img-fluid">
     <div class="col-6 p-lg-5 pg- mx-auto my-5">
-      <h1 class="display-2 fw-bold text-dark">
-        Creating Connections, One Pulse at a Time.
-      </h1>
+      <span class="display-2 fw-semibold text-black" id="element">
+      </span>
       <h5 class="fw-normal text-muted mb-3">
         Discover, Connect, Thrive.
       </h5>
@@ -142,6 +141,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
   crossorigin="anonymous"></script>
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Creating Connections, One Pulse at a Time', 
+                'Together We Pulse, Together We Prosper',
+                'Creating Community, Pulse after Pulse',
+                'Your Pulse, Our Network, Endless Opportunities',],
+      typeSpeed: 80,
+      bindInputFocusEvents: true,
+    });
+  </script>
 </body>
 
 </html>
