@@ -158,14 +158,14 @@ var posts = [
     },
     {
         id: 6,
-        "profilePic": "https://media.licdn.com/dms/image/C4D03AQGGB6CT6NqFzQ/profile-displayphoto-shrink_100_100/0/1618725077549?e=1700697600&v=beta&t=bVWRZez7P_jwVuEoWBH4NN5UOk-LyWoHlLwGtGENORI",
+        "profilePic": "https://bitshydnews.files.wordpress.com/2023/01/whatsapp-image-2023-01-14-at-15.44.14.jpeg?w=1024",
         "name": "Sandeep Jain",
         "description": "Taking meetings in your backyard >",
         "postImage": "https://pbs.twimg.com/media/F93-8nYXQAAsgPL?format=jpg&name=small"
     },
     {
         id: 7,
-        "profilePic": "https://media.licdn.com/dms/image/D5603AQE_kj8WigWDqg/profile-displayphoto-shrink_100_100/0/1688744624208?e=1700697600&v=beta&t=sgYHeKydKO9Sj1gLd7Gx_JOrljIRx5ErCU5geNIBrAo",
+        "profilePic": "https://media.licdn.com/dms/image/D4D03AQH6o2UAc1LmCw/profile-displayphoto-shrink_800_800/0/1699168798038?e=1704931200&v=beta&t=o32X6wP35kLIzsUXNI4hPWuTnnJ_ln2rpaTj8XXta6I",
         "name": "Suvra Ghosh",
         "description": "Fresh outta college ready to take on the world...",
         "postImage": "https://pbs.twimg.com/media/F92TAmsWEAAh4f0?format=jpg&name=small"
@@ -228,7 +228,7 @@ var posts = [
     },
     {
         id: 17,
-        "profilePic": "https://media.licdn.com/dms/image/D5603AQF4voR_1_BQZg/profile-displayphoto-shrink_100_100/0/1687295026446?e=1700697600&v=beta&t=xAHyIPjzg6KvkYX-bgFG6_yATiMpWi8qVCoUI1I4ft8",
+        "profilePic": "https://www.tevora.com/wp-content/uploads/2019/09/Nikita-Gupta-1-1920x1920.jpg",
         "name": "Nikita Gupta",
         "description": 'Started learning Kubernetes',
         "postImage": "https://pbs.twimg.com/media/F95aPwkXUAAOvqE?format=jpg&name=small"
@@ -329,7 +329,7 @@ var posts = [
         "profilePic": "https://pbs.twimg.com/profile_images/1633141863006838784/J4Zmxrmr_400x400.jpg",
         "name": "Programmer Memes",
         "description": 'This PC can probably run Linux, Mac OS and Windows concurrently.',
-        "postImage": "https://pbs.twimg.com/media/F5uckRfXQAACZG2?format=jpg&name=small"
+        "postImage": "https://media.licdn.com/dms/image/D4D22AQFxJ14t2CzDQA/feedshare-shrink_2048_1536/0/1699881008584?e=1703721600&v=beta&t=9wRB3KZmgMfNymHrmsZt00kjVne-zPdSm4Yi0BZiNQo"
     },
     {
         id: 32,
